@@ -1,6 +1,8 @@
 
 const listaCaracteres = document.getElementById("character-list");
 let paginaActual = 1;
+const botonNext = document.getElementById("next-page");
+const botonPrev = document.getElementById("prev-page");
 
 function traerPersonajes() {
   fetch(`https://rickandmortyapi.com/api/character/?page=${paginaActual}`)
@@ -23,6 +25,5 @@ function traerPersonajes() {
       });
     });
 }
-
 
 traerPersonajes();
